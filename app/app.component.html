@@ -1,0 +1,45 @@
+<sm-menu title="Angular2" class="ui menu inverted teal" logo="http://semantic-ui.com/images/logo.png">
+    <a sm-item icon="Home" class="item">Home</a>
+
+    <sm-menu class="ui menu right secondary icon">
+        <a sm-item href="#" icon="sidebar big" class="item" sm-dir-sidebar="right"></a>
+        <sm-sidebar class="right vertical inverted sidebar labeled menu teal huge">
+            <a class="item">
+                <i class="home icon"></i>
+                Home
+            </a>
+            <a class="item">
+                <i class="block layout icon"></i>
+                Topics
+            </a>
+            <a class="item">
+                <i class="smile icon"></i>
+                Friends
+            </a>
+        </sm-sidebar>
+    </sm-menu>
+</sm-menu>
+
+<div class="ui container">
+    <p></p>
+
+    <h1>Angular 2 QuickStart with NgSemantic</h1>
+
+    <sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
+        <content>Simple Card</content>
+        <extra>
+            <sm-button sm-dir-tooltip="Hover text" class="primary">Hover me</sm-button>
+            <sm-button sm-dir-dimmer="page" class="primary">Page dimmer</sm-button>
+        </extra>
+    </sm-card>
+
+    <sm-dimmer selector="page">
+        <div class="center">
+            <h2 class="ui inverted icon header">
+                <i class="mail icon"></i>
+                Dimmer Message
+                <div class="sub header">Dimmer sub-header</div>
+            </h2>
+        </div>
+    </sm-dimmer>
+</div>
