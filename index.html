@@ -16,15 +16,17 @@
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <!-- 2. Configure SystemJS -->
+    <!--
+    DEVELOPMENT
     <script src="systemjs.config.js"></script>
     <script>
         System.import('app').catch(function (err) {
             console.error(err);
         });
     </script>
+    -->
 </head>
 <!-- 3. Display the application -->
-<body>
 <body class="pushable">
     <div class="pusher">
         <my-app>
@@ -33,6 +35,6 @@
             </div>
         </my-app>
     </div>
-</body>
+    <script src="bundle/bundle.min.js"></script>
 </body>
 </html>
