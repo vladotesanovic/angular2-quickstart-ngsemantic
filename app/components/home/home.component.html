@@ -1,0 +1,18 @@
+<p>
+    Implementation of Modal window without jQuery
+</p>
+<button class="ui button positive" (click)="setVisibility(true)">Show modal window</button>
+
+<sui-modal [visibility]="visible" animation="fly down" (close)="setVisibility(false)">
+    <header>Hello</header>
+    <description>Test</description>
+    <actions>
+        <div class="ui black deny button">
+            Nope
+        </div>
+        <div class="ui positive right labeled icon button">
+            Yep, that's me
+            <i class="checkmark icon"></i>
+        </div>
+    </actions>
+</sui-modal>
