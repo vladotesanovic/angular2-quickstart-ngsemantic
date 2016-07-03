@@ -1,13 +1,9 @@
-import { Component, Type } from '@angular/core';
-import { SUIModalComponent } from "SUI-Angular2-Modal/modal";
+import { Component } from '@angular/core';
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 
 @Component({
     selector: 'my-home',
-    directives: [<Type>SUIModalComponent],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
     templateUrl: `app/components/home/home.component.html`
 })
-export class HomeComponent {
-    visible: boolean = false;
-
-    setVisibility(data: boolean) { this.visible = data; }
-}
+export class HomeComponent {}

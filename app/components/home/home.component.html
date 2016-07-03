@@ -1,12 +1,7 @@
-<p>
-    Implementation of Modal window without jQuery
-</p>
-<button class="ui button positive" (click)="setVisibility(true)">Show modal window</button>
+<button smDirTooltip="Tooltip text" smDirPosition="bottom center" class="ui button positive" (click)="modal.show({transition: 'fly down'})">Show modal window</button>
 
-<sui-modal [visibility]="visible" animation="fly down" (close)="setVisibility(false)">
-    <header>Hello</header>
-    <description>Test</description>
-    <actions>
+<sm-modal #modal title="Hello">
+    <div class="action">
         <div class="ui black deny button">
             Nope
         </div>
@@ -14,5 +9,5 @@
             Yep, that's me
             <i class="checkmark icon"></i>
         </div>
-    </actions>
-</sui-modal>
+    </div>
+</sm-modal>

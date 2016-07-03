@@ -10,20 +10,21 @@
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         '@angular/router':            'node_modules/@angular/router',
         'rxjs':                       'node_modules/rxjs',
-        'SUI-Angular2-Modal':         'node_modules/SUI-Modal'
+        'ng-semantic':                'node_modules/ng-semantic'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'app':                        { main: 'main.js',  defaultExtension: 'js' },
         'rxjs':                       { defaultExtension: 'js' },
         'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
-        'SUI-Angular2-Modal':         { main: 'modal.js', defaultExtension: 'js' }
+        'ng-semantic':         { main: 'ng-semantic.js', defaultExtension: 'js' }
     };
     var ngPackageNames = [
         'common',
         'compiler',
         'core',
         'http',
+        'forms',
         'platform-browser',
         'platform-browser-dynamic',
         'router-deprecated',
