@@ -9,6 +9,8 @@
         '@angular':                   'node_modules/@angular',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         '@angular/router':            'node_modules/@angular/router',
+        'jquery':                     'node_modules/jquery/dist/jquery.min.js',
+        'semantic':                   'vendor/semantic.min.js',
         'rxjs':                       'node_modules/rxjs',
         'ng-semantic':                'node_modules/ng-semantic'
     };

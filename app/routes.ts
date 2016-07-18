@@ -1,5 +1,5 @@
 import { provideRouter, RouterConfig } from '@angular/router';
-import { LocationStrategy, HashLocationStrategy } from "@angular/common";
+import { LocationStrategy, HashLocationStrategy, Type } from "@angular/common";
 
 import { HomeComponent } from './components/home/home.component';
 import { ReviewComponent } from './components/reviews/reviews.component';
@@ -9,15 +9,15 @@ import { AddReviewComponent } from "./components/reviews/add/add.component";
 import { StatisticReviewComponent } from "./components/reviews/statistic/statistic.component";
 
 const routes: RouterConfig = [
-    { path: '', component: HomeComponent },
+    { path: '', component: <Type>HomeComponent },
     {   path: 'reviews',
-        component: ReviewComponent,
+        component: <Type>ReviewComponent,
         children: [
-            { path: '', component: StatisticReviewComponent },
-            { path: 'add', component: AddReviewComponent }
+            { path: '', component: <Type>StatisticReviewComponent },
+            { path: 'add', component: <Type>AddReviewComponent }
         ]
     },
-    { path: 'events', component: EventsComponent, canActivate: [AuthGuard] }
+    { path: 'events', component: <Type>EventsComponent, canActivate: [AuthGuard] }
 ];
 
 export const APP_ROUTER_PROVIDERS = [
