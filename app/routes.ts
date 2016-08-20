@@ -1,15 +1,14 @@
-import { provideRouter, RouterConfig } from '@angular/router';
-import { LocationStrategy, HashLocationStrategy,  } from "@angular/common";
+import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { ReviewComponent } from './components/reviews/reviews.component';
-import { EventsComponent } from './components/events/events.component';
-import { AuthGuard } from "./services/authguard";
 import { AddReviewComponent } from "./components/reviews/add/add.component";
 import { StatisticReviewComponent } from "./components/reviews/statistic/statistic.component";
+import { AuthGuard } from "./services/authguard";
+import { EventsComponent } from "./components/events/events.component";
 
-const routes: RouterConfig = [
-    { path: '', component: HomeComponent },
+export const routes: Routes = [
+    { path: '', component: HomeComponent, pathMatch: 'full' },
     {   path: 'reviews',
         component: ReviewComponent,
         children: [
@@ -20,8 +19,8 @@ const routes: RouterConfig = [
     { path: 'events', component: EventsComponent, canActivate: [AuthGuard] }
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-    provideRouter(routes),
+export const APP_ROUTER_PROVIDERS: Array<{}> = [
     AuthGuard,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
 ];
+
+export const routing = RouterModule.forRoot(routes, { useHash: true });
