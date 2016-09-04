@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth } from './auth';
 import { Observable } from 'rxjs/Observable';
+import "rxjs/add/operator/map";
 
 @Injectable()
 export class AuthGuard {

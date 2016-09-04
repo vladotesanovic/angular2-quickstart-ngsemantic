@@ -10,6 +10,7 @@ import { ReviewComponent } from './components/reviews/reviews.component';
 import { AddReviewComponent } from "./components/reviews/add/add.component";
 import { StatisticReviewComponent } from "./components/reviews/statistic/statistic.component";
 import { EventsComponent } from "./components/events/events.component";
+import { Auth } from "./services/auth";
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { EventsComponent } from "./components/events/events.component";
         routing
     ],
     providers: [
-        APP_ROUTER_PROVIDERS
+        APP_ROUTER_PROVIDERS,
+        Auth
     ],
     declarations: [
         AppComponent,
